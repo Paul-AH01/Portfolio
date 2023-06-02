@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">" >
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio Website - Paul Applegate-Hughes</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Portfolio/Portfolio_Images/Grey Professional Monogram Circular Brand Logo.png" class="logo" alt="Personal Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">CV</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Paul</span> Applegate-Hughes<br>from South Yorkshire</h1>
+            </div>
+        </div>
+    </div>
+    <!--About-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Portfolio/Portfolio_Images/Personal Portfolio Banner.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a graduate from Sheffield Hallam University, my degree is in creative digital media.
+                    I have recently taken up an interest in web development, this is a portfolio to show my work 
+                    in this area.
+                    Lorem ipsum dolor sit amet. Aut itaque ipsam a voluptatibus autem et alias ipsam non dignissimos dolorem ut illum quis sit dicta minima.
+                     33 quia possimus ut illum consequatur sit dolor voluptate et odio eius aut totam dolore.
+                      Ea impedit quia et numquam suscipit At eius doloremque vel quae omnis in doloremque aliquam ut rerum recusandae qui earum consequatur. </p>
+                <div class="tab-titles"></div>
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Text goes here</li>
+                    <li><span>UI/UX</span><br>Text goes here</li>
+                    <li><span>UI/UX</span><br>Text goes here</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2019-2022</span><br>Text goes here</li>
+                    <li><span>2017-2019</span><br>Text goes here</li>
+                    <li><span>2012-2017</span><br>Text goes here</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Current</span><br>Text goes here</li>
+                    <li><span>2022</span><br>Text goes here</li>
+                    <li><span>2012-2022</span><br>Text goes here</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Portfolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img href="https://unsplash.com/photos/OqtafYT5kTw" alt="Hobby Site">
+                <div class="layer">
+                    <h3>Hobby Site</h3>
+                    <p>This was the first project of the course, 
+                        this shows what hobbies and interests I have.</p>
+                        <a href="https://github.com/Paul-AH01/HobbySite"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img href="https://unsplash.com/photos/cbEvoHbJnIE" alt="Quiz Site">
+                <div class="layer">
+                    <h3>Quiz Site</h3>
+                    <p>This was the first project of the course, 
+                        this shows what hobbies and interests I have.</p>
+                        <a href="https://github.com/Paul-AH01/MyQuizSite"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img href="https://unsplash.com/photos/bYiw48KLbmw" alt="Text Game">
+                <div class="layer">
+                    <h3>Text Game</h3>
+                    <p>This was the first project of the course, 
+                        this shows what hobbies and interests I have.</p>
+                        <a href="https://github.com/Paul-AH01/TextGame"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tabe-links");
+    var tabcontents = document.getElementsByClassName("tabe-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
